@@ -1,0 +1,34 @@
+.itemsWrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+.rootCard {
+  margin: 15px;
+}
+.ant-spin-lg .ant-spin-dot {
+  font-size: 45px;
+  margin-top: 40px;
+}
+.loader {
+  text-align: center;
+}
+.searchByName {
+  margin: 3% auto;
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .itemsWrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media screen and (max-width: 600px) {
+  .itemsWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 400px) {
+  .itemsWrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

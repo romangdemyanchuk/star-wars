@@ -1,0 +1,27 @@
+.root-Login, .root-Register {
+  padding: 5%;
+}
+form#login, form#register {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logBtn {
+  width: 100%;
+}
+.loginBtns,
+.registerBtns {
+  display: flex;
+  justify-content: center;
+}
+.loginBtn, .registerBtn {
+  border: none;
+  margin: 0 8px 20px 8px;
+}
+.loginHeading, .registerHeading {
+  font-size: 20px;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
