@@ -1,6 +1,6 @@
 import React from "react";
 import "antd/dist/antd.css";
-import "./main.scss"
+import "./login.scss"
 import {Button, Form, Input} from "antd";
 
 const RegisterForm = ({ setState }) => {

@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import "antd/dist/antd.css";
-import "./main.scss"
+import "./login.scss"
 import RegisterForm from "./registerForm";
 import LoginForm from "./loginForm";
 

@@ -14,11 +14,13 @@ form#login, form#register {
   display: flex;
   justify-content: center;
 }
-.loginBtn, .registerBtn {
+.loginBtn,
+.registerBtn {
   border: none;
   margin: 0 8px 20px 8px;
 }
-.loginHeading, .registerHeading {
+.loginHeading,
+.registerHeading {
   font-size: 20px;
   font-weight: 600;
   display: flex;

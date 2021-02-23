@@ -6,8 +6,8 @@ const baseURL = "https://swapi.dev/api/";
 const instance = axios.create({ baseURL });
 
 
-export const getPeoples = () => {
-    return instance.get(`people`);
+export const getPeople = (page) => {
+    return instance.get(`people/?page=${page}`);
 };
 
 export const getDetail = (id) => {

@@ -16,6 +16,15 @@
   margin: 3% auto;
   display: flex;
 }
+.ant-modal-footer {
+  display: none;
+}
+.ant-modal-wrap {
+  top: -50px;
+}
+.card {
+  margin: 3% auto;
+}
 
 @media screen and (max-width: 900px) {
   .itemsWrapper {
