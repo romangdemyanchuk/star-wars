@@ -1,25 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86b05954-bf19-41e5-8e0e-6dc0edba00e5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Main/MainContainer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+    <list default="true" id="86b05954-bf19-41e5-8e0e-6dc0edba00e5" name="Default Changelist" comment="lazy loading, detail information about item">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemDetail/detail.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemDetail/detail.scss" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ItemDetail/index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/login.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/loginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/loginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/registerForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/registerForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainContainer.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,8 +53,16 @@
       <workItem from="1613719903908" duration="16650000" />
       <workItem from="1613933315285" duration="3379000" />
       <workItem from="1613977951575" duration="22339000" />
-      <workItem from="1614067545056" duration="15479000" />
+      <workItem from="1614067545056" duration="18360000" />
     </task>
+    <task id="LOCAL-00001" summary="lazy loading, detail information about item">
+      <created>1614089201481</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1614089201482</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,5 +79,9 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="lazy loading, detail information about item" />
+    <option name="LAST_COMMIT_MESSAGE" value="lazy loading, detail information about item" />
   </component>
 </project>

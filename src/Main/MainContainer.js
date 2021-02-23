@@ -4,6 +4,7 @@ import "./main.scss"
 import {getDetail, getPeople, SearchedItemsInfo} from "../api";
 import {spliteUrl} from "../helpers";
 import DetailModal from "./detailModal/detailInfo";
+import debounce from 'lodash.debounce';
 import Main from "./main";
 
 let currentPage = 1
@@ -21,7 +22,7 @@ const MainContainer = () => {
             let screenHeight = window.innerHeight
             let documentHeight = document.body.scrollHeight
             if (currentPage < 9) {
-                if(scrollTop + screenHeight > documentHeight  - 50)  {
+                if(scrollTop + screenHeight > documentHeight  - 100)  {
                     currentPage++
                     getPeople(currentPage).then((item) => {
                         setPeople(prevState => {
@@ -32,7 +33,8 @@ const MainContainer = () => {
                 }
             }
         };
-        window.addEventListener('scroll', handleScroll);
+        const debouncedSave = debounce(() => handleScroll(), 500);
+        window.addEventListener('scroll', debouncedSave);
     }, [])
 
     useEffect(() => {
@@ -51,12 +53,10 @@ const MainContainer = () => {
     };
 
     const itemClick = (item) => {
-        console.log(item)
         setModalIsOpen(true)
         let id=spliteUrl(item.url)
         setItemImg(`https://starwars-visualguide.com/assets/img/characters/${id}.jpg`)
         getDetail(id).then((item) => {
-            console.log(item.data)
             setItemInfo(item.data)
         })
     }
