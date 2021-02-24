@@ -3,23 +3,10 @@ import "antd/dist/antd.css";
 import "./login.scss"
 import {Button, Form, Input} from "antd";
 
-const LoginForm = ({ setState }) => {
-
-    const onFinish = (values) => {
-        console.log('Received values of form: ', values);
-    };
+const Login = ({onFinish}) => {
     return <>
         <div className="root-Login">
             <div className="loginHeading">Login</div>
-            <span className="loginBtns">
-                <Button className="loginBtn active">Login</Button>
-                <Button
-                    className="loginBtn"
-                    onClick={() => setState(true)}
-                >
-                  Register
-                </Button>
-          </span>
             <Form
                 name="login"
                 className="login-form"
@@ -27,7 +14,7 @@ const LoginForm = ({ setState }) => {
                 onFinish={onFinish}
             >
                 <Form.Item
-                    name="e-mail"
+                    name="email"
                     rules={[
                         {
                             type: 'email',
@@ -60,7 +47,7 @@ const LoginForm = ({ setState }) => {
     </>
 };
 
-export default LoginForm;
+export default Login;
 
 
 

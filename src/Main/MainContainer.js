@@ -6,6 +6,7 @@ import {spliteUrl} from "../helpers";
 import DetailModal from "./detailModal/detailInfo";
 import debounce from 'lodash.debounce';
 import Main from "./main";
+import {useHistory} from "react-router-dom";
 
 let currentPage = 1
 const MainContainer = () => {
@@ -15,6 +16,17 @@ const MainContainer = () => {
     const [itemInfo, setItemInfo] = useState({})
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [itemImg, setItemImg] = useState(null)
+    const history = useHistory()
+
+    useEffect(() => {
+        let isAuth = localStorage.getItem('isAuth');
+        !isAuth && history.push('/')
+        setLoading(true)
+        getPeople(currentPage).then((item) => {
+            setLoading(false)
+            setPeople(item.data.results)
+        })
+    }, [])
 
     useEffect(() => {
         const  handleScroll = () =>  {
@@ -35,14 +47,6 @@ const MainContainer = () => {
         };
         const debouncedSave = debounce(() => handleScroll(), 500);
         window.addEventListener('scroll', debouncedSave);
-    }, [])
-
-    useEffect(() => {
-        setLoading(true)
-        getPeople(currentPage).then((item) => {
-            setLoading(false)
-            setPeople(item.data.results)
-        })
     }, [])
 
     const onSearchChange = (e) => {
