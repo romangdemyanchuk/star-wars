@@ -4,9 +4,15 @@ import "./main.scss"
 import {Card} from "antd";
 
 const Item = ({item, itemClick}) => {
+    const {name, gender} = item
     return  <div className="rootCard">
-            <Card hoverable className="card" title={item.name} onClick={() => itemClick(item)}>
-                <b>Gender:</b> {item.gender}
+            <Card
+                hoverable
+                className="card"
+                title={name}
+                onClick={() => itemClick(item)}
+            >
+                <b>Gender:</b> {gender}
             </Card>
         </div>
 };

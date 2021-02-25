@@ -3,6 +3,7 @@ import {Modal} from "antd";
 import './detailInfo.scss'
 
 export const DetailModal = ({ modalIsOpen, setModalIsOpen, itemInfo, itemImg }) => {
+    const {name, gender, birth_year, eye_color, height, hair_color} = itemInfo
     return (
         <Modal
             style={{top: '120px'}}
@@ -13,22 +14,22 @@ export const DetailModal = ({ modalIsOpen, setModalIsOpen, itemInfo, itemImg }) 
                 <img className="personImg" src={itemImg} alt="person"/>
                 <div className="itemFields">
                     <div className="itemField">
-                        <b>Name:</b> {itemInfo.name}
+                        <b>Name:</b> {name}
                     </div>
                     <div className="itemField">
-                        <b>Gender:</b> {itemInfo.gender}
+                        <b>Gender:</b> {gender}
                     </div>
                     <div className="itemField">
-                        <b>Birth year:</b> {itemInfo.birth_year}
+                        <b>Birth year:</b> {birth_year}
                     </div>
                     <div className="itemField">
-                        <b>Eye color:</b> {itemInfo.eye_color}
+                        <b>Eye color:</b> {eye_color}
                     </div>
                     <div className="itemField">
-                        <b>Height:</b> {itemInfo.height}
+                        <b>Height:</b> {height}
                     </div>
                     <div className="itemField">
-                        <b>Hair color:</b> {itemInfo.hair_color}
+                        <b>Hair color:</b> {hair_color}
                     </div>
                 </div>
             </div>

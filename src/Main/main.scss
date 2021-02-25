@@ -1,9 +1,9 @@
 .itemsWrapper {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-}
-.rootCard {
-  margin: 15px;
+  .rootCard {
+    margin: 15px;
+  }
 }
 .ant-spin-lg .ant-spin-dot {
   font-size: 45px;
@@ -24,6 +24,9 @@
 }
 .card {
   margin: 3% auto;
+}
+.ant-card-body {
+  text-align: center;
 }
 
 @media screen and (max-width: 900px) {

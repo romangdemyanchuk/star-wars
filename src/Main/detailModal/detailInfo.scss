@@ -4,13 +4,16 @@
 .itemDetailsWrapper {
   display: flex;
   align-items: center;
+  .personImg {
+    width: 100px;
+  }
+  .itemFields {
+    margin-left: 15px;
+    .itemField {
+      text-align: left;
+    }
+  }
 }
-.itemFields {
-  margin-left: 15px;
-}
-.personImg {
-  width: 100px;
-}
-.itemField {
-  text-align: left;
-}
+
+
+
