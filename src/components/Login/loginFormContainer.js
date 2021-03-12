@@ -1,19 +1,18 @@
 import React, {useEffect} from "react";
-import "antd/dist/antd.css";
-import "./login.scss"
-import {userAuth, userLogin} from "../api";
-import {infoAction} from "../helpers";
+import {userAuth, userLogin} from "../../api";
+import {infoAction} from "../../helpers/helpers";
 import {useHistory} from "react-router-dom";
 import Login from "./loginForm";
-
+import "./login.scss"
 
 const REQUEST_ERROR_RESULT_CODE = [1, 10]
 const LoginContainer = () => {
     const history = useHistory()
 
     useEffect(() => {
-        userAuth().then(res => {
-                if(res.data.resultCode === 0) {
+        userAuth()
+            .then(res => {
+                if (res.data.resultCode === 0) {
                     let {id, login, email} = res.data.data
                     let userData = JSON.stringify({id, login, email});
                     infoAction("You authorised ");
@@ -21,6 +20,9 @@ const LoginContainer = () => {
                     localStorage.setItem("isAuth", true);
                     localStorage.setItem("userData", userData);
                 }
+            })
+            .catch(() => {
+                infoAction("Something is wrong");
             })
     }, [])
 
@@ -30,14 +32,17 @@ const LoginContainer = () => {
     const onFinish = (values) => {
         userLogin(values)
             .then(res => {
-                if(res.data.resultCode === 0) {
+                if (res.data.resultCode === 0) {
                     localStorage.setItem("isAuth", true);
-                    infoAction("You successfully login");
+                    infoAction("You successfully Login");
                     history.push('/main')
                 }
-                if(REQUEST_ERROR_RESULT_CODE.includes(res.data.resultCode)) {
+                if (REQUEST_ERROR_RESULT_CODE.includes(res.data.resultCode)) {
                     infoAction(res.data.messages, "/");
                 }
+            })
+            .catch(() => {
+                infoAction("Something is wrong");
             })
     };
     return <Login onFinish={onFinish}/>

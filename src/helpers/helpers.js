@@ -12,6 +12,5 @@ export const infoAction = (error_info) => {
             description: error_info,
         });
     };
-
     openNotification();
 };

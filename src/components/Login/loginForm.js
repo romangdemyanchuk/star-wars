@@ -1,5 +1,4 @@
 import React from "react";
-import "antd/dist/antd.css";
 import "./login.scss"
 import {Button, Form, Input} from "antd";
 
@@ -10,7 +9,7 @@ const Login = ({onFinish}) => {
             <Form
                 name="login"
                 className="login-form"
-                initialValues={{ remember: true }}
+                initialValues={{remember: true}}
                 onFinish={onFinish}
             >
                 <Form.Item
@@ -26,11 +25,11 @@ const Login = ({onFinish}) => {
                         },
                     ]}
                 >
-                    <Input placeholder="email" />
+                    <Input placeholder="email"/>
                 </Form.Item>
                 <Form.Item
                     name="password"
-                    rules={[{ required: true, message: 'Please input your Password!' }]}
+                    rules={[{required: true, message: 'Please input your Password!'}]}
                 >
                     <Input
                         type="password"

@@ -1,19 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="86b05954-bf19-41e5-8e0e-6dc0edba00e5" name="Default Changelist" comment="change title">
+    <list default="true" id="86b05954-bf19-41e5-8e0e-6dc0edba00e5" name="Default Changelist" comment="fix bugs">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/login.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Login/loginFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Login/loginFormContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/MainContainer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/item.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main/main.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/login.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/login.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/loginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/loginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Login/loginFormContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Login/loginFormContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/MainContainer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/mainContainer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/detailModal/itemDetailInfo.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/detailModal/detailInfo.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/detailModal/itemDetailInfo.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/item.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/itemCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main/main.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Main/main.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/helpers.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.scss" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,11 +45,14 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2020.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\Projects\star-wars\src\helpers" />
+      <recent name="E:\Projects\star-wars\src\components" />
       <recent name="E:\Projects\capitals\src\Main\detailModal" />
     </key>
   </component>
@@ -64,7 +72,9 @@
       <workItem from="1614067545056" duration="28318000" />
       <workItem from="1614152565474" duration="6714000" />
       <workItem from="1614246348144" duration="745000" />
-      <workItem from="1614247180127" duration="3341000" />
+      <workItem from="1614247180127" duration="4465000" />
+      <workItem from="1615489149815" duration="5720000" />
+      <workItem from="1615543600729" duration="2083000" />
     </task>
     <task id="LOCAL-00001" summary="lazy loading, detail information about item">
       <created>1614089201481</created>
@@ -94,7 +104,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614247503181</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="fix bugs">
+      <created>1614266222447</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1614266222447</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -114,9 +131,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="lazy loading, detail information about item" />
-    <MESSAGE value="fix bugs" />
     <MESSAGE value="user login" />
     <MESSAGE value="change title" />
-    <option name="LAST_COMMIT_MESSAGE" value="change title" />
+    <MESSAGE value="fix bugs" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix bugs" />
   </component>
 </project>

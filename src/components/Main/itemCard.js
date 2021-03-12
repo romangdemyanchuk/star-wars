@@ -1,9 +1,8 @@
 import React from "react";
-import "antd/dist/antd.css";
-import "./main.scss"
 import {Card} from "antd";
+import "./main.scss"
 
-const Item = ({item, itemClick}) => {
+const ItemCard = ({item, itemClick}) => {
     const {name, gender} = item
     return  <div className="rootCard">
             <Card
@@ -16,4 +15,4 @@ const Item = ({item, itemClick}) => {
             </Card>
         </div>
 };
-export default Item;
+export default ItemCard;
