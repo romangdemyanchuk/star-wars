@@ -3,18 +3,16 @@ import * as axios from "axios";
 
 const baseURL = "https://swapi.dev/api/";
 
-const baseAuthURL = "https://social-network.samuraijs.com/api/1.0/";
+const baseAuthURL = "https://test-for-roman.herokuapp.com/api/auth/";
 
 const instance = axios.create({ baseURL });
 
-
-export const userAuth = () => {
-    return axios.get(`${baseAuthURL}auth/me`, {withCredentials: true})
+export const userLogin = (data) => {
+    return axios.post(`${baseAuthURL}login`, data)
 };
 
-export const userLogin = data => {
-    const {email, password} = data
-    return axios.post(`${baseAuthURL}auth/login`, {email, password})
+export const userRegister = (data) => {
+    return axios.post(`${baseAuthURL}register`, data)
 };
 
 export const getPeople = page => {

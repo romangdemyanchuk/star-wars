@@ -5,7 +5,7 @@ import {Button, Form, Input} from "antd";
 const Login = ({onFinish}) => {
     return <>
         <div className="root-Login">
-            <div className="loginHeading">Login</div>
+            <div className="loginHeading">Registration</div>
             <Form
                 name="login"
                 className="login-form"
@@ -13,7 +13,7 @@ const Login = ({onFinish}) => {
                 onFinish={onFinish}
             >
                 <Form.Item
-                    name="email"
+                    name="login"
                     rules={[
                         {
                             type: 'email',

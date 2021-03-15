@@ -1,49 +1,35 @@
-import React, {useEffect} from "react";
-import {userAuth, userLogin} from "../../api";
+import React from "react";
+import {userLogin, userRegister} from "../../api";
 import {infoAction} from "../../helpers/helpers";
 import {useHistory} from "react-router-dom";
 import Login from "./loginForm";
 import "./login.scss"
 
-const REQUEST_ERROR_RESULT_CODE = [1, 10]
 const LoginContainer = () => {
     const history = useHistory()
-
-    useEffect(() => {
-        userAuth()
-            .then(res => {
-                if (res.data.resultCode === 0) {
-                    let {id, login, email} = res.data.data
-                    let userData = JSON.stringify({id, login, email});
-                    infoAction("You authorised ");
-                    history.push('/main')
-                    localStorage.setItem("isAuth", true);
-                    localStorage.setItem("userData", userData);
-                }
-            })
-            .catch(() => {
-                infoAction("Something is wrong");
-            })
-    }, [])
 
     let isAuth = localStorage.getItem('isAuth');
     isAuth && history.push('/main')
 
     const onFinish = (values) => {
-        userLogin(values)
-            .then(res => {
-                if (res.data.resultCode === 0) {
-                    localStorage.setItem("isAuth", true);
-                    infoAction("You successfully Login");
-                    history.push('/main')
-                }
-                if (REQUEST_ERROR_RESULT_CODE.includes(res.data.resultCode)) {
-                    infoAction(res.data.messages, "/");
+        userRegister(values)
+            .then((response) => {
+                if (response.request.statusText === "Created") {
+                    userLogin(values)
+                        .then((response) => {
+                            if (response.statusText === "OK") {
+                                localStorage.setItem("isAuth", true);
+                                history.push('/main')
+                                return infoAction("You successfully register and login")
+                            }
+                        })
                 }
             })
-            .catch(() => {
-                infoAction("Something is wrong");
-            })
+            .catch((e) => {
+                if (e.response.status) {
+                    infoAction(e.response.data.message, "");
+                }
+            });
     };
     return <Login onFinish={onFinish}/>
 };

@@ -7,9 +7,9 @@ const Main = ({loading, onSearchChange, items, itemClick}) => {
     return <>
         {
             loading
-            ?
+                ?
                 <div className="loader"><Spin size="large"/></div>
-            :
+                :
                 <>
                     <Input
                         placeholder="search"

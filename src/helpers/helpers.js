@@ -1,4 +1,4 @@
-import { notification } from "antd";
+import {notification} from "antd";
 
 export const spliteUrl = (url) => {
     let splitedUrl = url.split('/');
