@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {getDetailOfPerson, getPeople, searchedPeopleInfo} from "../../api";
 import {infoAction, spliteUrl} from "../../helpers/helpers";
-import DetailModal from "./detailModal/itemDetailInfo";
+import DetailModal from "./ItemDetailModal/itemDetailInfo";
 import debounce from 'lodash.debounce';
 import Main from "./main";
 import {useHistory} from "react-router-dom";
