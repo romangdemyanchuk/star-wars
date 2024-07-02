@@ -1,6 +1,6 @@
 import React from "react";
 import {Modal} from "antd";
-import './itemDetailInfo.scss'
+import './itemDetailInfo.css'
 
 export const DetailModal = ({ modalIsOpen, setModalIsOpen, itemInfo, itemImg }) => {
     const {name, gender, birth_year, eye_color, height, hair_color} = itemInfo

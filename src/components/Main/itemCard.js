@@ -1,6 +1,5 @@
 import React from "react";
 import {Card} from "antd";
-import "./main.scss"
 
 const ItemCard = ({item, itemClick}) => {
     const {name, gender} = item

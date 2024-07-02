@@ -4,8 +4,7 @@ import {infoAction, spliteUrl} from "../../helpers/helpers";
 import DetailModal from "./ItemDetailModal/itemDetailInfo";
 import debounce from 'lodash.debounce';
 import Main from "./main";
-import {useHistory} from "react-router-dom";
-import "./main.scss"
+import "./main.css"
 
 const MainContainer = () => {
     const [people, setPeople] = useState([])
@@ -15,11 +14,8 @@ const MainContainer = () => {
     const [modalIsOpen, setModalIsOpen] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [itemImg, setItemImg] = useState(null)
-    const history = useHistory()
 
     useEffect(() => {
-        let isAuth = localStorage.getItem('isAuth');
-        !isAuth && history.push('/')
         setLoading(true)
         getPeople(currentPage)
             .then((item) => {

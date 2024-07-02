@@ -1,7 +1,6 @@
 import React from "react";
 import ItemCard from "./itemCard";
 import {Input, Spin} from "antd";
-import "./main.scss"
 
 const Main = ({loading, onSearchChange, items, itemClick}) => {
     return <>
